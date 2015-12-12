@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{background-color: #C0C0C0;}
+p
+{
+text-align: center;
+}
+table {
+margin-left: auto;
+margin-right: auto;
+}
+ td {border: 1px solid black;
+	margin: 15px;
+    padding: 30px;}
+.boat{background-color: black;}
+.white {background-color: white;}
+.miss {background-color: #0000FF;}
+.hit {background-color: red;}
+#gridDiv {
+	float: left; 
+}
+#opponentGrid {
+	float: right;
+}
+#animationDiv {position: relative; top: 0; left:0; height: 65;}
+#bsImg {position: relative; display: block;
+    margin: 0 auto;}
+	
+#loginDiv {
+position: absolute; top:200px; right:1000px;
+}
+#startGameDiv {
+position: absolute; top: 200px; right: 500px;
+}
+#endDiv {
+position: absolute; top: 300px; right: 700px;
+}
+#canvasDiv {
+position: absolute; top: 0px; left: 50px;
+}
+
+</style>
+
+<title>Battleship Grid</title>
+
+<script src = Model.js></script>
+<script src = genGrid.js></script>
+
+<audio id = "explosionSound" preload="auto" src = "explosion.mp3" autoplay></audio>
+<audio id = "miss" preload="auto" src = "miss.mp3"></audio>
+</head>
+
+<body onload = showGrid()>
+
+
+
+<div id = "animationDiv">
+<img src = "battleship-logo" id = "bsImg" style="bottom: -1024px;">
+</div>
+
+<div id = "startGameDiv">
+
+</div>
+
+<div id = "boatPlacement"></div>
+
+<div id = "gridDiv"></div>
+
+<div id = "opponentGrid"></div>
+
+<div id = "gridCoords"></div>
+
+<div id = "loginDiv"></div>
+
+<div id = "endDiv"></div>
+
+<div id = "canvasDiv"><canvas id="myCanvas" width="500" height="100">
+</canvas></div>
+
+
+</body>
+</html>
